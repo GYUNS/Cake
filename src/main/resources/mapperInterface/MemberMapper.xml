@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapperInterface.MemberMapper" >
+	<select id="selectMemberOne" resultType="vo.MemberVO">
+		 select id, password, nickname, birthday, url from member where id=#{log_id} 
+	</select>
+
+	<insert id="insert">
+		insert into member values (#{id}, #{password}, #{nickname}, #{birthday} ,"abc") 
+	</insert>
+
+
+</mapper>
