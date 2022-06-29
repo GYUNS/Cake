@@ -1,5 +1,7 @@
 package com.green.cake;
 
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.request;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,10 +14,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import dao.MemberDAO;
 import service.MemberService;
 import vo.MemberVO;
 
@@ -24,11 +28,11 @@ public class MemberController {
 	@Autowired
 	MemberService service;
 	
-	@RequestMapping(value = "/selectMemberone", method=RequestMethod.GET)
+	@RequestMapping(value = "/selectone", method=RequestMethod.GET)
 	public ModelAndView selectMemberone(ModelAndView mv, MemberVO vo) {
 		// 입력한 newID 보관
 		mv.addObject("newId", vo.getId());
-		vo = service.selectMemberOne(vo);
+		vo = service.selectOne(vo);
 		if ( vo!=null ) { 
 			// id 존재 -> 사용불가능
 			mv.addObject("idUse", "F");
@@ -55,7 +59,7 @@ public class MemberController {
 	      System.out.println(vo.getLog_password());
 	      
 	      // Service
-	      vo = service.selectMemberOne(vo);
+	      vo = service.selectOne(vo);
 	      
 	      if (vo != null) {
 	         // 아이디 확인완료(일치)
@@ -136,6 +140,36 @@ public class MemberController {
 	} //join
 	
 	
+	// 실시간 아이디 중복검사
+//	@RequestMapping(value = "/idOverlap")
+//	public ModelAndView idOverlap(HttpServletRequest request, HttpServletResponse response, ModelAndView mv,
+//			MemberVO vo) throws IOException {
+//		// 1. 요청분석
+//		// => 입력한 id 보관
+//		// => response 한글처리
+//		response.setContentType("text/html; charset=UTF-8");
+//		String id = vo.getId();
+//		PrintWriter out = response.getWriter();
+//
+//		int idDoubleCheck = service.idDoubleCheck(vo);
+//
+//		// 2. Service
+//		if (idDoubleCheck == 0) {
+//			System.out.println("이미 존재하는 아이디입니다.");
+//		} else if (idDoubleCheck == 1) {
+//			System.out.println("사용 가능한 아이디 입니다.");
+//		}
+//
+//		out.write(idDoubleCheck + "");
+//		// 3. 결과 : view 처리
+//		mv.setViewName("jsonView");
+//		return mv;
+//	} // idOverlap	
+@RequestMapping(value = "/memberIdChk", method = RequestMethod.POST)
+@ResponseBody
+public void memberIdChkPOST(String memberId) throws Exception{
 	
+	}
+
 }
 

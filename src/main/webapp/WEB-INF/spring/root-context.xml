@@ -34,5 +34,7 @@
       interface 방식으로 적용하면 필요없음 -->
    </bean>
    <mybatis-spring:scan base-package="mapperInterface"/>
+   
+ 
       
 </beans>

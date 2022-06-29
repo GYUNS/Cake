@@ -13,9 +13,15 @@ public class MemberServiceImpl implements MemberService {
 	   MemberMapper mapper;
 	
 	@Override
-	   public MemberVO selectMemberOne(MemberVO vo) {
-	      return mapper.selectMemberOne(vo);
-	   }
+	public MemberVO selectOne(MemberVO vo) {
+		return mapper.selectOne(vo);
+	}
+	
+	// 아이디 실시간 중복검사
+	@Override
+	public int idDoubleCheck(MemberVO vo) {
+		return mapper.idDoubleCheck(vo);
+	}
 
 	@Override
 	public int insert(MemberVO vo) {
