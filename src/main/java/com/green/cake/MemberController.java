@@ -165,11 +165,18 @@ public class MemberController {
 //		mv.setViewName("jsonView");
 //		return mv;
 //	} // idOverlap	
-@RequestMapping(value = "/memberIdChk", method = RequestMethod.POST)
+@RequestMapping(value = "/idDoubleCheck", method = RequestMethod.POST)
 @ResponseBody
 public void memberIdChkPOST(String memberId) throws Exception{
 	
 	}
+
+ // invaite
+@RequestMapping(value = "/invaite")
+public ModelAndView invaite(ModelAndView mv, MemberVO vo) throws IOException {
+mv.setViewName("invaite_main");
+return mv;
+}
 
 }
 

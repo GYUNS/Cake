@@ -4,9 +4,7 @@ public class CakeVO {
 	//변수 선언
 	private int seq;
 	private int cnt;
-	private String deco_color;
-	private String deco_fruit;
-	private String deco_cookie;
+	private String items;
 	private String c_nickname;
 	private String title;
 	private String contents;
@@ -25,23 +23,11 @@ public class CakeVO {
 	public void setCnt(int cnt) {
 		this.cnt = cnt;
 	}
-	public String getDeco_color() {
-		return deco_color;
+	public String getItems() {
+		return items;
 	}
-	public void setDeco_color(String deco_color) {
-		this.deco_color = deco_color;
-	}
-	public String getDeco_fruit() {
-		return deco_fruit;
-	}
-	public void setDeco_fruit(String deco_fruit) {
-		this.deco_fruit = deco_fruit;
-	}
-	public String getDeco_cookie() {
-		return deco_cookie;
-	}
-	public void setDeco_cookie(String deco_cookie) {
-		this.deco_cookie = deco_cookie;
+	public void setItems(String items) {
+		this.items = items;
 	}
 	public String getC_nickname() {
 		return c_nickname;
@@ -68,10 +54,13 @@ public class CakeVO {
 		this.c_id = c_id;
 	}
 	
+	// toString
 	@Override
 	public String toString() {
-		return "CakeVO [seq=" + seq + ", cnt=" + cnt + ", deco_color=" + deco_color + ", deco_fruit=" + deco_fruit
-				+ ", deco_cookie=" + deco_cookie + ", c_nickname=" + c_nickname + ", title=" + title + ", contents="
-				+ contents + ", c_id=" + c_id + "]";
+		return "CakeVO [seq=" + seq + ", cnt=" + cnt + ", items=" + items + ", c_nickname=" + c_nickname + ", title="
+				+ title + ", contents=" + contents + ", c_id=" + c_id + "]";
 	}
+	
+	
+
 }

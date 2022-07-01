@@ -1,5 +1,12 @@
+body {
+    overflow: hidden;
+}
 
+body* {
+    touch-action: none;
+}
 
+/* 케이크보기 */
 #section1 {
     width: 100%;
     height: 100%;
@@ -11,150 +18,307 @@
 }
 
 /* 가로 슬라이드 --------------------------------------------------------------------------------------------------------------*/
-.fp-controlArrow {
-    position: absolute;
-    z-index: 4;
-    top: calc(50% + 4rem);
-    cursor: pointer;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    margin-top: -38px;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    -o-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-}
+
 .fp-controlArrow.fp-prev {
     display: none;
 }
+
 .fp-controlArrow.fp-next {
     display: none;
 }
 
-#slide1 {
-}
+#slide1 {}
 
-#slide2 {
-}
+#slide2 {}
 
-#slide3 {
-}
+#slide3 {}
+
 /* 가로슬라이드 종료 --------------------------------------------------------------------------------------------------------------*/
 
 
 /* swiper --------------------------------------------------------------------------------------------------------------*/
-    #section1 {
-        padding-top: 12rem;
-        text-align: center;
-    }
-    #section1 #slide1 {
-        
-    }
-    #section1 form input[type^=s] {
-        width: 65rem;
-        height: 5rem;
-        background-color: #e098ae;
-        color: #fff;
-        border: none;
-        border-radius: 5rem;
-        margin-top: 4rem;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        font-weight: bold;
-        font-size: 2rem;
-        letter-spacing: 15px;
-    }
-    #section1 form input[type^=s]:hover {
-        background-color: hotpink;
-    }
-    #section1 .swiper {
-        
-        /* position: absolute; */
-        width: 65rem;
-        height: 40rem;
-        border-radius: 2.5rem;
-        background-color: #fff;
-        border: 2px solid #e098ae;
-        margin: 0 auto;
-    }
-    #section3 .swiper .swiper-wrapper {
-     }
-    #section3 .swiper .swiper-wrapper.slide1 { }
-    #section3 .swiper .swiper-wrapper.slide2 { }
-    #section3 .swiper .swiper-wrapper.slide3 { }
-    #section1 .swiper .swiper-pagination-bullet {
-        width: 1.2rem; 
-        height: 1.2rem; 
-        background: transparent; 
-        border: 1px solid pink; 
-        border-radius: 0.6rem;
-    }
-    #section1 .swiper .swiper-pagination-bullet-active { 
-        width: 4rem; 
-        transition: width .5s; 
-        border-radius: 0.5rem; 
-        background: pink; 
-        border: 1px solid transparent; 
-    }
-    .swiper-button-next::after,
-    .swiper-button-prev::after {
-        display: none;
-    }
-    #section1 .swiper .swiper-button-prev>span {
-        font-size: 5rem;
-        padding-left: 3rem;
-        color: pink;
-    }
-    #section1 .swiper .swiper-button-next>span {
-        font-size: 5rem;
-        padding-right: 3rem;
-        color: pink;
-    }
-    /* swiper end --------------------------------------------------------------------------------------------------------------*/
+#section1 {
+    padding-top: 3rem;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+#section1 #slide1 {}
+
+#section1 .swiper {
+    /* position: absolute; */
+    width: 65rem;
+    height: 60rem;
+    border-radius: 2.5rem;
+    background-color: #fff;
+    border: 2px solid #e098ae;
+}
+
+#section3 .swiper .swiper-wrapper {}
+
+#section3 .swiper .swiper-wrapper.slide1 {}
+
+#section3 .swiper .swiper-wrapper.slide2 {}
+
+#section3 .swiper .swiper-wrapper.slide3 {}
+
+#section1 .swiper .swiper-pagination-bullet {
+    width: 1.2rem;
+    height: 1.2rem;
+    background: transparent;
+    border: 1px solid pink;
+    border-radius: 0.6rem;
+}
+
+#section1 .swiper .swiper-pagination-bullet-active {
+    width: 4rem;
+    transition: width .5s;
+    border-radius: 0.5rem;
+    background: pink;
+    border: 1px solid transparent;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    display: none;
+}
+
+#section1 .swiper .swiper-button-prev>span {
+    font-size: 5rem;
+    padding-left: 3rem;
+    color: pink;
+}
+
+#section1 .swiper .swiper-button-next>span {
+    font-size: 5rem;
+    padding-right: 3rem;
+    color: pink;
+}
+
+/* swiper end --------------------------------------------------------------------------------------------------------------*/
+
+
+/* 장식고르기 -------------------------------------------------------------------------------*/
+.section #slide2 {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+.section #slide2 .choiceBox {
+    box-sizing: border-box;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10rem;
+    box-shadow: 2px 2px 10px grey;
+    width: 140rem;
+    height: 60rem;
+    padding: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section #slide2 .choiceBox a:nth-of-type(1) {
+    top: 4rem;
+    left: 5rem;
+    position: absolute;
+    color: crimson;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.section #slide2 .choiceBox .decorateBox_wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.section #slide2 .choiceBox .decorateBox_wrap .decorateBox {
+    position: relative;
+    margin: 2rem 2rem;
+    width: 20rem;
+    height: 20rem;
     
-    .section #slide2 {
-    }
-    .section #slide2 .choiceBox {
-        position: relative;
-        background-color: #fff;
-        border-radius: 10rem;
-        box-shadow: 2px 2px 10px grey;
-        margin: 0 auto;
-        width: 140rem;
+
+}
+
+.section #slide2 .choiceBox .decorateBox_wrap .decorateBox input[type=radio] {
+    visibility: hidden;
+    /* width: 30rem;
+    height: 30rem; */
+    position: absolute;
+    left: top;
+    top: 0;
+}
+
+.section #slide2 .choiceBox .decorateBox_wrap .decorateBox input[type=radio]+label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px grey;
+    display: grid;
+    place-content: center;
+
+}
+
+.section #slide2 .choiceBox .decorateBox_wrap .decorateBox input[type=radio]:checked+label {
+    border: 5px solid black;
+}
+.section #slide2 .choiceBox .decorateBox_wrap .decorateBox input[type=radio]:checked+ label .img_wrap {
+    background-color: #e098ae;
+}
+.section #slide2 .choiceBox .decorateBox_wrap .decorateBox .img_wrap {
+    background-color: #fff;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    padding: auto;
+    display: grid;
+    place-content: center;
+    transition: background .2s ease;
+}
+.section #slide2 .choiceBox .decorateBox_wrap .decorateBox .img_wrap img{
+    width: 12rem;
+    height: 12rem;
+
+    /* 드래그방지 */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+/* 편지쓰기  -------------------------------------------------------------------------------*/
+.section #slide3 {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    overflow: hidden;
+}
+
+.section #slide3 .letterBox {
+    box-sizing: border-box;
+    background-clip: padding-box;
+    background-color: #fff;
+    position: relative;
+    border: 3px dashed red;
+    box-shadow: 2px 2px 10px grey;
+    width: 100rem;
+    height: 65rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.letterBox .from {
+    width: 100%;
+}
+
+.letterBox .from input {
+    outline: #ccc;
+    border: #ccc solid 2px;
+    line-height: 31px;
+    padding: 0 10px;
+    background-image:
+        linear-gradient(to right, white 10px, transparent 10px),
+        linear-gradient(to left, white 10px, transparent 10px),
+        repeating-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+    box-sizing: border-box;
+    width: 80%;
+    background-attachment: local;
+    border-bottom: none;
+}
+
+.letterBox .title {
+    width: 100%;
+}
+
+.letterBox .title input {
+    outline: #ccc;
+    border: #ccc solid 2px;
+    line-height: 31px;
+    padding: 0 10px;
+    background-image:
+        linear-gradient(to right, white 10px, transparent 10px),
+        linear-gradient(to left, white 10px, transparent 10px),
+        repeating-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+    background-attachment: local;
+    box-sizing: border-box;
+    width: 80%;
+    border-bottom: none;
+    border-top: none;
+}
+
+.letterBox .notes {
+    outline: #ccc;
+    border: #ccc solid 2px;
+    box-sizing: border-box;
+    background-attachment: local;
+    background-image:
+        linear-gradient(to right, white 10px, transparent 10px),
+        linear-gradient(to left, white 10px, transparent 10px),
+        repeating-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+    line-height: 31px;
+    padding: 8px 10px;
+    width: 80%;
+    border-top: none;
+    resize: none;
+}
+
+@media all and (min-width: 1024px) {
+
+    /* 브라우저 창 width가 1024px보다 커지는 순간부터 적용
+          데스크탑 */
+}
+
+@media all and (max-width: 1024px) {
+
+    /* 브라우저 창 width가 1024px보다 작아지는 순간부터 적용
+        태블릿 */
+    #section1 .swiper {
+        width: 50rem;
         height: 50rem;
     }
-    .section #slide2 .choiceBox a:nth-of-type(1){
-        top: 2rem;
-        left:5rem;
-        position: absolute;
-        color: crimson;
-        font-size: 1.6rem;
-        font-weight: bold;
-    }
-
-    .section #slide3 {
-        position: relative;
+    .section #slide2 .choiceBox {
+        width: 70rem;
+        height: 60rem;
     }
 
     .section #slide3 .letterBox {
         position: relative;
-        background-color: #fff;
-        border-radius: 10rem;
-        box-shadow: 2px 2px 10px grey;
-        margin: 0 auto;
-        width: 45%;
-        height: 85%;
+        width: 50rem;
+        height: 70rem;
 
     }
 
-    .notes {
-        background-attachment: local;
-        background-image:
-          linear-gradient(to right, white 10px, transparent 10px),
-          linear-gradient(to left, white 10px, transparent 10px),
-          repeating-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
-        line-height: 31px;
-        padding: 8px 10px;
-      }
+}
 
+@media all and (max-width: 768px) {
+
+    /* 브라우저 창 width가 768px보다 작아지는 순간부터 적용
+        모바일 */
+    #section1 .swiper {
+        /* position: absolute; */
+        width: 35rem;
+        height: 35rem;
+    }
+
+    .section #slide2 .choiceBox {
+        width: 70rem;
+        height: 60rem;
+    }
+
+    .section #slide3 .letterBox {
+        position: relative;
+        width: 50rem;
+        height: 70rem;
+
+    }
+}

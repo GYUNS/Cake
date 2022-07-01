@@ -16,5 +16,4 @@
 		insert into member values (#{id}, #{password}, #{nickname}, #{birthday} ,"abc") 
 	</insert>
 
-
 </mapper>
